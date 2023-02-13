@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+}
+
+app-left-panel {
+    width: 40%;
+}
+
+app-right-panel {
+    width: 60%;
+}

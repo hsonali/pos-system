@@ -1,0 +1,86 @@
+.left-panel {
+    background-color: #D3D3D3;
+    /* width: 40%; */
+    height: 100vh;
+    margin-right: 0.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-table {
+    margin-top: 1rem;
+}
+
+table th {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.no-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: white;
+    margin: 1rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: gray;
+}
+
+.footer-content {
+    position: fixed;
+    bottom: 0.1rem;
+    width: calc(40% - 2rem);
+    /* padding: 0.5rem; */
+}
+
+.footer-table {
+    margin: .5rem;
+}
+
+.footer-table tr {
+    border-collapse: collapse;
+    border-bottom: 1px solid gray;
+    background-color: white;
+}
+
+.footer-table tr td:first-child {
+    background-color: #c5c5c5
+}
+
+.footer-table tr td .final-calc {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.2rem;
+}
+
+.footer-content .footer-buttons {
+    /* margin: .5rem; */
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 0.5rem;
+}
+
+.cancel-sale,
+.process-sale {
+    font-size: 0.8rem;
+    color: white;
+    /* padding: .75rem 3rem; */
+    border: unset;
+    border-radius: 0.1rem;
+    text-transform: uppercase;
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+}
+
+.cancel-sale {
+    background-color: red;
+}
+
+.process-sale {
+    background-color: green;
+}

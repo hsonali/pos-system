@@ -43,16 +43,33 @@
     transition: opacity .2s, visibility .2s;
 }
 
-.price,
-.desc {
+.image-column .desc {
+    text-transform: capitalize;
+    font-size: .75rem;
+    position: absolute;
+    padding-top: 1rem;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+}
+
+.price {
     visibility: hidden;
     transition: unset;
     background: rgba(224, 163, 136, 0.72);
 }
 
+.desc {
+    visibility: hidden;
+}
+
 .image-column:hover .price {
     visibility: visible;
     opacity: 1;
+}
+
+.image-column:hover .desc {
+    visibility: visible;
 }
 
 .image-column:hover .title {

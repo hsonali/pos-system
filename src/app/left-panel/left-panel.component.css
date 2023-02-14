@@ -11,9 +11,20 @@
     margin-top: 1rem;
 }
 
+.product-table tr td {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
 table th {
     font-size: .75rem;
     text-transform: uppercase;
+}
+
+.quantity-selector .form-control {
+    width: 1rem;
+    margin: 0 0.2rem;
 }
 
 .no-products {

@@ -46,6 +46,6 @@
             </div>
         </div>
     </div> -->
-    <app-left-panel></app-left-panel>
-    <app-right-panel></app-right-panel>
+    <app-left-panel [products]="products" [productLength]="productLength" [total]="total"></app-left-panel>
+    <app-right-panel (getData)="getProductData($event)"></app-right-panel>
 </div>

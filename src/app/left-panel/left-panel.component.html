@@ -1,27 +1,43 @@
 <div class="left-panel">
     <table class="product-table" style="width:100%">
         <tr>
+            <th></th>
             <th>Products</th>
             <th>Price</th>
             <th>Quantity</th>
             <th>Total</th>
         </tr>
-        <!-- <tr>
-      <td>Jill</td>
-      <td>Smith</td>
-      <td>50</td>
-    </tr> -->
+        <tr *ngFor="let product of products">
+
+            <td>
+                <button (click)="removeProduct(product)" class="btn btn-danger" style="color: red;
+                font-weight: bold;">
+                    X
+                </button>
+            </td>
+            <td>{{product.name}}</td>
+
+            <td>{{product.price}}</td>
+            <td class="quantity-selector">
+                <button class="btn btn-primary" (click)="plus(product)">+</button>
+                <input type="text" class="form-control" [(ngModel)]="product.quantity">
+                <button class="btn btn-primary" (click)="minus(product)">-</button>
+            </td>
+            <td>{{product.quantity * product.price | currency}}</td>
+        </tr>
 
     </table>
-    <p class="no-products">There are no products</p>
+    <div *ngIf="productLength<=0">
+        <p class="no-products">There are no products</p>
+    </div>
     <div class="footer-content">
         <table class="footer-table" style="width:100%">
             <tr>
                 <td>Subtotal</td>
                 <td>
                     <div class="final-calc">
-                        <span>0.000EUR</span>
-                        <span>Items</span>
+                        <span>{{subtotal | currency}}</span>
+                        <span>Items {{totalItems}}</span>
                     </div>
 
                 </td>
@@ -30,8 +46,8 @@
                 <td>VAT tax</td>
                 <td>
                     <div class="final-calc">
-                        <span>10%</span>
-                        <span>0.000EUR</span>
+                        <span>{{vat*100}}%</span>
+                        <span>{{subtotal*vat | number : '1.2-2' | currency }}</span>
                     </div>
                 </td>
             </tr>
@@ -39,19 +55,19 @@
                 <td>Discount</td>
                 <td>
                     <div class="final-calc">
-                        <span>10%</span>
-                        <span>0.000EUR</span>
+                        <span>{{discount*100}}%</span>
+                        <span>{{subtotal*discount | number : '1.2-2' | currency }}</span>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>Total</td>
-                <td style="color:green; padding: 0 0.2rem;">0.000EUR</td>
+                <td style="color:green; padding: 0 0.2rem;">{{subtotal + subtotal*discount - subtotal*vat | number : '1.2-2' | currency }}</td>
             </tr>
         </table>
         <div class="footer-buttons">
-            <button class="cancel-sale">Cancel Sale</button>
-            <button class="process-sale">Process Sale</button>
+            <button class="cancel-sale" (click)="clearAll()">Cancel Sale</button>
+            <button class="process-sale" (click)="openModal()">Process Sale</button>
         </div>
     </div>
 </div>

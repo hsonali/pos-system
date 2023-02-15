@@ -9,18 +9,18 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
+}
+
+.date {
+    padding-left: 1rem;
 }
 
 .content {
     position: absolute;
     z-index: 999;
     background-color: #fefefe;
-    /* margin: auto; */
-    /* padding: 20px; */
     border: 1px solid #888;
     width: 30%;
-    /* top: 1rem; */
     left: 1rem;
     height: 60%;
     overflow-x: hidden;
@@ -44,7 +44,8 @@
 .sale-number {
     text-align: center;
     margin-top: 1rem;
-    font-size: 2rem;
+    font-size: 1.2rem;
+    text-transform: capitalize;
 }
 
 .product-data {
@@ -54,6 +55,10 @@
 
 .modal-content {
     position: relative;
+}
+
+.receipt-table tr td {
+    border-bottom: solid thin lightgray;
 }
 
 .close-button {
@@ -67,4 +72,5 @@
 
 .close {
     width: 90%;
+    border: solid thin lightgray;
 }

@@ -4,12 +4,11 @@
             <p>Receipt</p>
         </div>
         <div class="sale-number">
-            <p>Sale No.:</p>
+            <p>Sale No.: {{saleNo}}</p>
         </div>
-        <div>
-            <p>{{myDate | date:'yyyy-MM-dd'}}</p>
+        <div class="date">
+            <p>Date: {{dateObj | date: 'd-M-yyyy h:mm:ss'}}</p>
         </div>
-
 
         <div class="modal-content">
             <table class="receipt-table" style="width:100%; margin-bottom: 100px;">
@@ -27,7 +26,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td>
+                    <td style="padding-top: 1.5rem;">
                         <div style="display: flex;
                         justify-content: space-between;">
                             <span>Total Items</span>
@@ -35,7 +34,7 @@
                         </div>
                     </td>
                     <td></td>
-                    <td>
+                    <td style="padding-top: 1.5rem;">
                         <div style="display: flex;
                         justify-content: space-between;">
                             <span>Total</span>

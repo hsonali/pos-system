@@ -1,6 +1,5 @@
 .left-panel {
     background-color: #D3D3D3;
-    /* width: 40%; */
     height: 100vh;
     margin-right: 0.25rem;
     display: flex;
@@ -43,7 +42,6 @@ table th {
     position: fixed;
     bottom: 0.1rem;
     width: calc(40% - 2rem);
-    /* padding: 0.5rem; */
 }
 
 .footer-table {
@@ -67,7 +65,6 @@ table th {
 }
 
 .footer-content .footer-buttons {
-    /* margin: .5rem; */
     display: flex;
     justify-content: space-around;
     padding-bottom: 0.5rem;
@@ -77,7 +74,6 @@ table th {
 .process-sale {
     font-size: 0.8rem;
     color: white;
-    /* padding: .75rem 3rem; */
     border: unset;
     border-radius: 0.1rem;
     text-transform: uppercase;

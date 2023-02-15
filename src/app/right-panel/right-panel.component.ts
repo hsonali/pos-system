@@ -7,7 +7,7 @@ import { ProductService } from '../product.service';
   styleUrls: ['./right-panel.component.css']
 })
 export class RightPanelComponent implements OnInit {
- subtotal:any;
+  subtotal: any;
   products: any;
   @Output() getData = new EventEmitter<any>();
   @Output() subTotalAmount = new EventEmitter<any>();
@@ -19,13 +19,10 @@ export class RightPanelComponent implements OnInit {
     this.subtotal = this.ps.getSubtotal(this.products);
   }
 
-  addProduct(data: any){
+  //Add product on right panel image click
+  addProduct(data: any) {
     this.subtotal = this.ps.getSubtotal(this.products);
-    // data.quantity += 1;
-    // console.log(data,"rightpanel");
     this.getData.emit(data);
     this.subTotalAmount.emit(this.subtotal);
   }
-  
-
 }

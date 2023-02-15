@@ -21,7 +21,7 @@ export class RightPanelComponent implements OnInit {
 
   addProduct(data: any){
     this.subtotal = this.ps.getSubtotal(this.products);
-    data.quantity += 1;
+    // data.quantity += 1;
     // console.log(data,"rightpanel");
     this.getData.emit(data);
     this.subTotalAmount.emit(this.subtotal);

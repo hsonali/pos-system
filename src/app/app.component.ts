@@ -31,8 +31,31 @@ export class AppComponent implements OnInit {
     this.productData.image = data.image;
     this.total = parseInt(this.productData.price)*1;
     
-    this.productItems.push(Object.assign({}, this.productData));
-    this.products = [...new Set(this.productItems)];
+    
+    // this.products.push(Object.assign({}, this.productData));
+    // this.products.map(product => {
+    //   if(product.name == data.name){
+    //     product.quantity = data.quantity;
+    //   } else{
+    //     this.products.push(Object.assign({}, this.productData));
+    //   }
+      
+    // })
+
+    const existingItem = this.products.find((item) => {
+      return item.name === data.name;
+    });
+    
+    if(existingItem) {
+       existingItem.quantity++;
+    } else {
+      this.products.push(Object.assign({}, this.productData));
+    }
+    
+
+    // if(!this.products.includes(data.name)){
+
+    // }
 
   this.subtotal = this.ps.getSubtotal(this.products);
   this.totalItems = this.ps.getItemCount(this.products);

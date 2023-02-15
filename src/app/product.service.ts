@@ -9,7 +9,7 @@ export class ProductService {
     {
       "name": "computer",
       "price": "130",
-      "quantity" : 0,
+      "quantity" : 1,
       "category": "computers",
       "description": "Acer computer with RAM and graphics card",
       "image": "assets/images/computer.jfif"
@@ -17,7 +17,7 @@ export class ProductService {
     {
       "name": "sweater",
       "price": "1",
-      "quantity" : 0,
+      "quantity" : 1,
       "category": "Clothing",
       "description": "fashion, clothes , sweater, wool, cardigan,...",
       "image": "assets/images/sweater.jpg"
@@ -25,7 +25,7 @@ export class ProductService {
     {
       "name": "tie",
       "price": "46",
-      "quantity" : 0,
+      "quantity" : 1,
       "category": "Clothing",
       "description": "fashion, tie, clothes, accessory , accessoire,...",
       "image": "assets/images/tie.jfif"
@@ -33,7 +33,7 @@ export class ProductService {
     {
       "name": "jacket",
       "price": "190",
-      "quantity" : 0,
+      "quantity" : 1,
       "category": "Clothing",
       "description": "winter jacket ",
       "image": "assets/images/jacket.jfif"
@@ -41,7 +41,7 @@ export class ProductService {
     {
       "name": "shirt",
       "price": "60",
-      "quantity" : 0,
+      "quantity" : 1,
       "category": "Clothing",
       "description": "casual shirt",
       "image": "assets/images/shirt.jfif"
@@ -49,7 +49,7 @@ export class ProductService {
     {
       "name": "shoes",
       "price": "80",
-      "quantity" : 0,
+      "quantity" : 1,
       "category": "Footwear",
       "description": "casual shoes",
       "image": "assets/images/shoes.jfif"
@@ -57,7 +57,7 @@ export class ProductService {
     {
       "name": "pants",
       "price": "100",
-      "quantity" : 0,
+      "quantity" : 1,
       "category": "Fashion",
       "description": "casual pants",
       "image": "assets/images/pants.jfif"
@@ -65,7 +65,7 @@ export class ProductService {
     {
       "name": "mobile",
       "price": "800",
-      "quantity" : 0,
+      "quantity" : 1,
       "category": "Electronics",
       "description": "Smartphones",
       "image": "assets/images/mobile.jfif"
@@ -73,7 +73,7 @@ export class ProductService {
     {
       "name": "Heels",
       "price": "90",
-      "quantity" : 0,
+      "quantity" : 1,
       "category": "Footwear",
       "description": "Fancy footwear",
       "image": "assets/images/heels.jfif"
@@ -81,7 +81,7 @@ export class ProductService {
     {
       "name": "watch",
       "price": "500",
-      "quantity" : 0,
+      "quantity" : 1,
       "category": "Fashion",
       "description": "Smart watches",
       "image": "assets/images/watch.jfif"
@@ -89,7 +89,7 @@ export class ProductService {
     {
       "name": "TV",
       "price": "1000",
-      "quantity" : 0,
+      "quantity" : 1,
       "category": "Electronics",
       "description": "Smart television",
       "image": "assets/images/tv.jfif"
@@ -97,7 +97,7 @@ export class ProductService {
     {
       "name": "sofa",
       "price": "500",
-      "quantity" : 0,
+      "quantity" : 1,
       "category": "Furniture",
       "description": "Comfortable sofa sets",
       "image": "assets/images/sofa.jpg"
@@ -105,7 +105,7 @@ export class ProductService {
     {
       "name": "dress",
       "price": "120",
-      "quantity" : 0,
+      "quantity" : 1,
       "category": "Fashion",
       "description": "One piece dress",
       "image": "assets/images/dress.jfif"
@@ -113,7 +113,7 @@ export class ProductService {
     {
       "name": "perfume",
       "price": "50",
-      "quantity" : 0,
+      "quantity" : 1,
       "category": "Beauty",
       "description": "Organic perfume",
       "image": "assets/images/perfume.jfif"
@@ -121,7 +121,7 @@ export class ProductService {
     {
       "name": "bag",
       "price": "40",
-      "quantity" : 0,
+      "quantity" : 1,
       "category": "Accessories",
       "description": "Handbag",
       "image": "assets/images/bag.jfif"
@@ -129,7 +129,7 @@ export class ProductService {
     {
       "name": "book",
       "price": "100",
-      "quantity" : 0,
+      "quantity" : 1,
       "category": "Stationary",
       "description": "Galvin OS",
       "image": "assets/images/book.jfif"
@@ -137,7 +137,7 @@ export class ProductService {
     {
       "name": "earring",
       "price": "40",
-      "quantity" : 0,
+      "quantity" : 1,
       "category": "Accessories",
       "description": "Jwellery",
       "image": "assets/images/earring.jfif"

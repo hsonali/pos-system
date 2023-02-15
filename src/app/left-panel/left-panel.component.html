@@ -36,7 +36,7 @@
                 <td>Subtotal</td>
                 <td>
                     <div class="final-calc">
-                        <span>{{subtotal | currency}}</span>
+                        <span>{{subtotal | currency: 'EUR'}}</span>
                         <span>Items {{totalItems}}</span>
                     </div>
 
@@ -47,7 +47,7 @@
                 <td>
                     <div class="final-calc">
                         <span>{{vat*100}}%</span>
-                        <span>{{subtotal*vat | number : '1.2-2' | currency }}</span>
+                        <span>{{subtotal*vat | number : '1.2-2'}} EUR</span>
                     </div>
                 </td>
             </tr>
@@ -56,18 +56,19 @@
                 <td>
                     <div class="final-calc">
                         <span>{{discount*100}}%</span>
-                        <span>{{subtotal*discount | number : '1.2-2' | currency }}</span>
+                        <span>{{subtotal*discount | number : '1.2-2'}} EUR</span>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>Total</td>
-                <td style="color:green; padding: 0 0.2rem;">{{subtotal + subtotal*discount - subtotal*vat | number : '1.2-2' | currency }}</td>
+                <td style="color:green; padding: 0 0.2rem;">{{subtotal + subtotal*discount - subtotal*vat | number : '1.2-2'}} EUR</td>
             </tr>
         </table>
         <div class="footer-buttons">
             <button class="cancel-sale" (click)="clearAll()">Cancel Sale</button>
             <button class="process-sale" (click)="openModal()">Process Sale</button>
+            <app-modal-component [clearAll]="clearAll" [products]="products" [subtotal]="subtotal" [vat]="vat" [discount]="discount" [totalItems]="totalItems" #modal></app-modal-component>
         </div>
     </div>
 </div>

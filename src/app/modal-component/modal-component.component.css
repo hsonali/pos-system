@@ -13,9 +13,58 @@
 }
 
 .content {
+    position: absolute;
+    z-index: 999;
     background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
+    /* margin: auto; */
+    /* padding: 20px; */
     border: 1px solid #888;
-    width: 80%;
+    width: 30%;
+    /* top: 1rem; */
+    left: 1rem;
+    height: 50%;
+    overflow-x: hidden;
+}
+
+.modal-heading {
+    background-color: rgb(6, 6, 31);
+    color: white;
+    text-align: left;
+    height: 2rem;
+    width: 100%;
+    margin: unset;
+}
+
+.modal-heading p {
+    margin: unset;
+    padding-left: 1rem;
+    padding-top: 0.3rem;
+}
+
+.sale-number {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.product-data {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.close-button {
+    position: sticky;
+    bottom: 0.75rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close {
+    width: 90%;
 }

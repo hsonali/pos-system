@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Product } from './model/Product';
 
 @Injectable({
   providedIn: 'root'
@@ -146,11 +147,18 @@ export class ProductService {
   getAll(){
     return this.products;
   }
-  subTotal(products: any){
-    products.reduce(function(subtotal: any, item: { quantity: number; price: number; }) {
-      subtotal += (item.quantity * item.price);
+  getSubtotal(items:Product[]) {
+    return items.reduce((subtotal, item ) => {
+      subtotal += (item.quantity * parseInt(item.price));
       console.log(subtotal);
       return subtotal;
     }, 0);
-}
+  }
+
+  getItemCount(items:Product[]) {
+    return items.reduce((totalItems: any, item: any) => {
+      totalItems += item.quantity;
+      return totalItems;
+    }, 0);
+  }
 }

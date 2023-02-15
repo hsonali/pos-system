@@ -46,6 +46,7 @@
             </div>
         </div>
     </div> -->
-    <app-left-panel [products]="products" [productLength]="productLength" [total]="total"></app-left-panel>
+    <app-left-panel [products]="products" [productLength]="productLength" [total]="total" [subtotal]="subtotal" [totalItems]="totalItems"></app-left-panel>
+    <!-- (subTotalAmount)="getsubTotalAmount($event)"  -->
     <app-right-panel (getData)="getProductData($event)"></app-right-panel>
 </div>

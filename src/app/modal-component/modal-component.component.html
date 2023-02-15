@@ -1,6 +1,76 @@
 <div #myModal class="container">
     <div class="content">
-        <p>Some content here...</p>
-        <button (click)="close()">Close</button>
+        <div class="modal-heading">
+            <p>Receipt</p>
+        </div>
+        <div class="sale-number">
+            <p>Sale No.:</p>
+        </div>
+        <div>
+            <p>{{myDate | date:'yyyy-MM-dd'}}</p>
+        </div>
+
+
+        <div class="modal-content">
+            <table class="receipt-table" style="width:100%; margin-bottom: 100px;">
+                <tr>
+                    <th>#</th>
+                    <th>Products</th>
+                    <th>Quantity</th>
+                    <th>Sub Total</th>
+                </tr>
+                <tr class="product-data" *ngFor="let product of products; let i = index">
+                    <td>{{i}}</td>
+                    <td>{{product.name | uppercase}}</td>
+                    <td>{{product.quantity}}</td>
+                    <td>{{product.quantity * product.price | currency}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div style="display: flex;
+                        justify-content: space-between;">
+                            <span>Total Items</span>
+                            <span>{{totalItems}}</span>
+                        </div>
+                    </td>
+                    <td></td>
+                    <td>
+                        <div style="display: flex;
+                        justify-content: space-between;">
+                            <span>Total</span>
+                            <span>{{subtotal + subtotal*discount - subtotal*vat | number : '1.2-2'}} EUR</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <div style="display: flex;
+                        justify-content: space-between;">
+                            <span>VAT</span>
+                            <span>{{vat*100}}%</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <div style="display: flex;
+                        justify-content: space-between;">
+                            <span>Discount</span>
+                            <span>{{discount*100}}%</span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="close-button">
+                <button class="close" (click)="close()">Close</button>
+            </div>
+        </div>
     </div>
 </div>
